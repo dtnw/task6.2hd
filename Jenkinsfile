@@ -17,7 +17,7 @@ pipeline{
         }
         stage('Unit and Integration Tests'){
             steps {
-                dir("test/seleniumtest"){
+                dir("test/seleniumtest/seleniumtest"){
                     bat "dotnet run"
                 }
             }
