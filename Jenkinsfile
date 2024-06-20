@@ -3,13 +3,14 @@ pipeline{
     stages{
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/dtnw/task6.2HD.git'
+                git branch: 'main', url: 'https://github.com/dtnw/task6.2hd.git'
             }
         }
         stage('Build'){
             steps{
                 echo "Build the code using Vue to compile and package the code."
                 dir("my-project"){
+                    bat "npm install"
                     bat "npm run build"
                 }
             }
